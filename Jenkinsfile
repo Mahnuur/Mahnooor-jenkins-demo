@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        DOCKER_IMAGE = 'mahnoor/jenkins-demo'
+        DOCKER_IMAGE = 'mahnuur/jenkins-demo'
         IMAGE_TAG = "${BUILD_NUMBER}"
     }
 
