@@ -1,0 +1,270 @@
+    1  sudo apt update && sudo apt upgrade -y
+    2  wsl -l -v
+    3  sudo apt install wsl
+    4  wsl -l -v
+    5  ls
+    6  sudo apt install
+    7  sudo apt  install cron -y
+    8  sudo service cron start
+    9  crontab -e
+   10  crontab -1
+   11  crontab -l
+   12  cd ~
+   13  ./activity2.sh
+   14  ls
+   15  find / -name activity2.sh 2>/dev/null
+   16  cd /mnt/c/Users/User
+   17  ls
+   18  chmod +x activity2.sh
+   19  ./activity2.sh
+   20  crontab -l
+   21  ls
+   22  ./activity2.sh
+   23  crontab -l
+   24  cat /var/log/syslog | grep CRON
+   25  uname -a
+   26  lsb 
+   27  lsb_release -a
+   28  java --version
+   29  curl --version
+   30  systemctl --version
+   31  sudo apt install
+   32  sudo apt install -y fontconfig openjdk-17-jre
+   33  java --version
+   34  sudo apt update
+   35  sudo apt clean
+   36  sudo apt autoremove -y
+   37  sudo apt install openjdk-21-jdk
+   38  java --version
+   39  sudo wget -O /usr/share/keyrings/jenkins-keyring.asc https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key
+   40  echo "deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc]" https://pkg.jenkins.io/debian-stable binary/ | sudo tee /etc/apt/sources.list.d/jenkins.list > /dev/null
+   41  sudo apt install
+   42  sudo apt install -y jenkins
+   43  curl -fsSL https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key | sudo tee /usr/share/keyrings/jenkins-keyring.asc > /dev/null
+   44  echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] https://pkg.jenkins.io/debian-stable binary/ | sudo tee /etc/apt/sources.list.d/jenkins.list > /dev/null
+   45  sudo apt update
+   46  sudo rm -f /etc/apt/sources.list.d/jenkins.list
+   47  sudo rm -f /usr/share/keyrings/jenkins-keyring.asc
+   48  sudo apt update
+   49  sudo apt install -y ca-certificates curl gnupg
+   50  curl -fsSL https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key | sudo gpg --dearmor -o /usr/share/keyrings/jenkins.gpg
+   51  echo deb [signed-by=/usr/share/keyrings/jenkins.gpg] https://pkg.jenkins.io/debian-stable binary/ | sudo tee /etc/apt/sources.list.d/jenkins.list > /dev/null
+   52  sudo apt update
+   53  sudo rm -f /usr/share/keyrings/jenkins.gpg
+   54  sudo rm -f /etc/apt/sources.list.d/jenkins.list
+   55  curl -fsSL https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key | sudo tee /usr/share/keyrings/jenkins-keyring.asc > /dev/null
+   56  echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] https://pkg.jenkins.io/debian-stable binary/ | sudo tee /etc/apt/sources.list.d/jenkins.list > /dev/null
+   57  sudo apt update
+   58  sudo rm -f /etc/apt/sources.list.d/jenkins.list
+   59  sudo rm -f /usr/share/keyrings/jenkins*
+   60  sudo apt update
+   61  apt list --upgradable
+   62  sudo mkdir -p /etc/apt/keyrings
+   63  curl -fsSL https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key | sudo gpg --dearmor -o /etc/apt/keyrings/jenkins.gpg
+   64  echo deb [signed-by=/etc/apt/keyrings/jenkins.gpg] https://pkg.jenkins.io/debian-stable binary/ | sudo tee /etc/apt/sources.list.d/jenkins.list > /dev/null
+   65  sudo apt update
+   66  sudo apt install -y jenkins
+   67  docker --version
+   68  sudo apt install -y jenkins
+   69  ok
+   70  sudo apt-get install jenkins
+   71  sudo wget -O /etc/apt/keyrings/jenkins-keyring.asc   https://pkg.jenkins.io/debian-stable/jenkins.io-2026.key
+   72  sudo apt-get update
+   73  sudo apt update
+   74  sudo apt install -y jenkins
+   75  curl -fsSL https://pkg.jenkins.io/debian-stable/... | sudo tee   /usr/share/keyrings/jenkins-keyring.asc >  /dev/null
+   76  curl -fsSL https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key | sudo gpg --dearmor -o /usr/share/keyrings/jenkins.gpg
+   77  echo deb [signed-by=/usr/share/keyrings/jenkins.gpg] https://pkg.jenkins.io/debian-stable binary/ | sudo tee /etc/apt/sources.list.d/jenkins.list > /dev/null
+   78  sudo apt-get update
+   79  sudo apt update
+   80  wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key | apt-key add -
+   81  sudo sh -c 'echo deb https://pkg.jenkins.io/debian-stable binary/ > \
+   82  e>     /etc/apt/sources.list.d/jenkins.list'
+   83  sudo apt-get update -y
+   84  sudo apt-get install jenkins -y
+   85  apt upgrade
+   86  sudo apt upgrade
+   87  sudo apt update
+   88  sudo apt get install jenkins -y 
+   89  curl -fsSL https://pkg.jenkins.io/debian-stable/jenkins.io-2026.key | sudo tee   /usr/share/keyrings/jenkins-keyring.asc > /dev/null
+   90  echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc]   https://pkg.jenkins.io/debian-stable binary/ | sudo tee   /etc/apt/sources.list.d/jenkins.list > /dev/null
+   91  sudo apt-get update
+   92  sudo apt-get install jenkins
+   93  systemctl status jenkins
+   94  cat /var/lib/jenkins/secrets/initialAdminPassword
+   95  sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+   96  sudo systemctl stop jenkins
+   97  sudo nano /var/lib/jenkins/config.xml
+   98  sudo systemctl start jenkins
+   99  sudo systemctl stop jenkins
+  100  sudo nano /var/lib/jenkins/config.xml
+  101  sudo systemctl start jenkins
+  102  grep useSecurity /var/lib/jenkins/config.xml
+  103  mkdir jenkins-demo
+  104  cd jenkins-demo
+  105  git init
+  106  git branch -M main
+  107  nano app.js
+  108  nano Dockerfile
+  109  ls
+  110  nano .dockerignore
+  111  ls
+  112  cd Mahnoor-jenkins-demo
+  113  cd jenkins-demo
+  114  ls
+  115  git add .
+  116  git commit -m "Initial commit  Jenkins-demo project"
+  117  git config --global user.name "Mahnuur"
+  118  git config --global user.email "mahnur735@gmail.com"
+  119  git config --global --list
+  120  git add .
+  121  git commit -m "Initial commit Mahnoor-Jenkins-demo project"
+  122  git remote add origin https://github.com/mahnuur/mahnoor-jenkins-demo.git
+  123  git push -u origin main
+  124  cd jenkins-demo
+  125  git add .
+  126  git commit -m "Initial commit "Mahnoor-jenkins-demo project"
+  127  git remote add origin https://github.com/mahnuur/mahnoor-jenkins-demo.git
+  128  git commit -m "Initial commit - Mahnoor-jenkins-demo project"
+  129  git remote add origin https://github.com/mahnuur/mahnoor-jenkins-demo.git
+  130  error: remote origin already exist
+  131  git push -u origin main
+  132  git remote -v
+  133  git config --global --unset credential.helper
+  134  git push -u origin main
+  135  git config --global --unset credential.helper
+  136  git credential-cache exit
+  137  git push -u origin main
+  138  git credential reject https://github.com
+  139  git config --global --unset credential.helper
+  140  git push -u origin main
+  141  ssh-keygen -t ed25519 -C "mahnuur"
+  142  cat ~/.ssh/id_ed25519.pub
+  143  git remote set-url origin git@github.com:mahnuur/mahnoor-jenkins-demo.git
+  144  git push -u origin main
+  145  nano Jenkinsfile
+  146  git add Jenkinsfile
+  147  git commit -m "Mahnoor - Add Jenkins pipeline"
+  148  git push origin main
+  149  sudo apt update
+  150  sudo apt install nodejs npm -y
+  151  node -v
+  152  npm -v
+  153  sudo apt install
+  154  sudo apt install docker.io -y
+  155  sudo systemctl start docker
+  156  sudo systemctl enable docker
+  157  docker --version
+  158  sudo usermod -aG docker jenkins
+  159  sudo systemctl restart jenkins
+  160  mkdir mahnooor-jenkins-demo
+  161  cd mahnooor-jenkins-demo
+  162  git init
+  163  git branch -M main
+  164  nano app.js
+  165  ls
+  166  nano app.js
+  167  ls
+  168  rm app.jses
+  169  rm -f app.jses
+  170  ls
+  171  nano Dockerfile
+  172  ls
+  173  nano .dockerignore
+  174  ls
+  175  git add .
+  176  git commit -m "Initial commit  mahnooor-jenkins-demo  project"
+  177  git remote add origin https://github.com/mahnuur/mahnooor-jenkins-demo.git
+  178  git push -u origin main
+  179  ssh-keygen -t ed25519 -C "mahnuur"
+  180  cat ~/.ssh/id_ed25519.pub
+  181  git push -u origin min
+  182  git push -u origin main
+  183  git remote -v
+  184  git remote set-url origin git@github.com:mahnuur/mahnooor-jenkins-demo.git
+  185  git remote -v
+  186  ssh -T git@github.com
+  187  git push -u origin main
+  188  nano jenkinsfile
+  189  ls
+  190  git add jenkinsfile
+  191  git status
+  192  git commit -m 'Add Jenkinsfile
+  193  git commit -m 'Add Jenkinsfile'
+  194  git push origin main
+  195  ls
+  196  mv jenkinsfile Jenkinsfile
+  197  git add Jenkinsfile
+  198  git commit -m "Rename jenkinsfile to Jenkinsfile"
+  199  git push origin main
+  200  git push -u origin main
+  201  git pull origin main --allow-unrelated-histories
+  202  git pull origin main --allow-unrelated-histories --no-rebase
+  203  ls
+  204  git push origin main
+  205  nano Jenkinsfile
+  206  ls
+  207  git add Jenkinsfile
+  208  git commit -m "Fix Jenkinsfile"
+  209  git push origin main
+  210  mkdir mahnooor-jenkins-demo
+  211  rm -rf mahnooor-jenkins-demo
+  212  ls
+  213  rm -rf jenkins-demo
+  214  ls
+  215  mkdir Mahnooor-jenkins-demo
+  216  cd Mahnooor-jenkins-demo
+  217  git init
+  218  git branch -M main
+  219  nano app.js
+  220  ls
+  221  nano Dockerfile
+  222  ls
+  223  nano .dockerignore
+  224  ls
+  225  git add .
+  226  git commit -m "Initial commit Mahnooor-jenkins-demo project"
+  227  git remote add origin https://github.com/mahnuur/Mahnooor-jenkins-demo.git
+  228  git push -u origin main
+  229  git remote add origin https://github.com/mahnuur/Mahnooor-jenkins-demo.git
+  230  ssh-keygen -t ed25519 -C "mahnuur"
+  231  cat ~/.ssh/id_ed25519.pub
+  232  git remote add origin https://github.com/mahnuur/Mahnooor-jenkins-demo.git
+  233  git push -u origin main
+  234  ssh -T git@github.com
+  235  mkdir Mahnooor-jenkins-demo
+  236  rm -r Mahnooor-jenkins-demo
+  237  rm -rf Mahnooor-jenkins-demo
+  238  ls
+  239  mkdir Mahnooor-jenkins-demo
+  240  xd Mahnooor-jenkins-demo
+  241  cd Mahnooor-jenkins-demo
+  242  git init
+  243  git branch -M main
+  244  nano app.js
+  245  ls
+  246  nano Dockerfile
+  247  ls
+  248  nano .dockerignore
+  249  ls
+  250  git add .
+  251  git commit -m "Initial commit Mahnooor-jenkins-demo project"
+  252  git remote add origin https://github.com/mahnuur/Mahnooor-jenkins-demo.git
+  253  git push -u origin main
+  254  ssh-keygen -t ed25519 -C "mahnuur"
+  255  cat ~/.ssh/id_ed25519.pub
+  256  ssh -T git@github.com
+  257  git remote set-url origin git@github.com:mahnuur/mahnoor-jenkins-demo.git
+  258  git remote -v
+  259  git push -u origin main
+  260  git remote -v
+  261  git push -u origin main
+  262  nano Jenkinsfile
+  263  ls
+  264  git add Jenkinsfile
+  265  git status
+  266  git add Jenkinsfile
+  267  git push origin main
+  268  git commit -m "Add Jenkinsfile"
+  269  git push origin main
+  270  history > commands.txt
