@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        DOCKER_IMAGE = 'Mahnoor/jenkins-demo'
+        DOCKER_IMAGE = 'mahnoor/jenkins-demo'
         IMAGE_TAG = "${BUILD_NUMBER}"
     }
 
@@ -28,20 +28,21 @@ pipeline {
             }
         }
 
-        // ✅ NEW: Push to Docker Hub
         stage('Push to Hub') {
-            steps {
-                withCredentials([usernamePassword(
-                    credentialsId: 'dockerhub-creds',
-                    usernameVariable: 'DOCKER_USER',
-                    passwordVariable: 'DOCKER_PASS'
-                )]) {
-                    sh 'docker login -u $DOCKER_USER -p $DOCKER_PASS'
-                    sh 'docker push $DOCKER_IMAGE:$IMAGE_TAG'
-                    sh 'docker push $DOCKER_IMAGE:latest'
-                }
-            }
+    steps {
+        withCredentials([usernamePassword(
+            credentialsId: 'dockerhub-creds',
+            usernameVariable: 'DOCKER_USER',
+            passwordVariable: 'DOCKER_PASS'
+        )]) {
+            sh '''
+                echo $DOCKER_PASS | docker login -u $DOCKER_USER --password-stdin
+            '''
+            sh 'docker push $DOCKER_USER/jenkins-demo:$BUILD_NUMBER'
+            sh 'docker push $DOCKER_USER/jenkins-demo:latest'
         }
+    }
+}
 
         // ✅ NEW: Deploy Stage
         stage('Deploy') {
